@@ -9,17 +9,19 @@ def get_fib(position):
 
 
 if __name__ == "__main__":
-    print("Running {} tests".format(__file__))
+    print("Running {} tests:".format(__file__), end=' ')
 
     # Test cases
-    assert(get_fib(0) == 0)
-    assert(get_fib(1) == 1)
-    assert(get_fib(2) == 1)
-    assert(get_fib(3) == 2)
-    assert(get_fib(4) == 3)
-    assert(get_fib(5) == 5)
-    assert(get_fib(6) == 8)
-    assert(get_fib(7) == 13)
-    assert(get_fib(8) == 21)
-    assert(get_fib(9) == 34)
-    assert(get_fib(11) == 89)
+    assert (get_fib(0) == 0)
+    assert (get_fib(1) == 1)
+    assert (get_fib(2) == 1)
+    assert (get_fib(3) == 2)
+    assert (get_fib(4) == 3)
+    assert (get_fib(5) == 5)
+    assert (get_fib(6) == 8)
+    assert (get_fib(7) == 13)
+    assert (get_fib(8) == 21)
+    assert (get_fib(9) == 34)
+    assert (get_fib(11) == 89)
+
+    print("Passed")

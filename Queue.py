@@ -16,7 +16,7 @@ class Queue:
 
 
 if __name__ == "__main__":
-    print("Running {} tests".format(__file__))
+    print("Running {} tests:".format(__file__), end=' ')
 
     # Test Cases
     # Setup
@@ -38,3 +38,5 @@ if __name__ == "__main__":
 
     q.enqueue(5)
     assert (q.peek() == 5)
+
+    print("Passed")
