@@ -1,4 +1,4 @@
-# /usr/bin/env python3
+#!/usr/bin/env python3
 
 
 class Element(object):
@@ -61,6 +61,17 @@ class LinkedList(object):
             else:
                 self.head = current.next
 
+    def insert_first(self, new_element):
+        new_element.next = self.head
+        self.head = new_element
+
+    def delete_first(self):
+        deleted = self.head
+        if self.head:
+            self.head = self.head.next
+            deleted.next = None
+        return deleted
+
 
 if __name__ == "__main__":
     # Test cases
@@ -76,8 +87,8 @@ if __name__ == "__main__":
     ll.append(e3)
 
     # Test get_position
-    assert(ll.head.next.next.value == 3)
-    assert(ll.get_position(3).value == 3)
+    assert (ll.head.next.next.value == 3)
+    assert (ll.get_position(3).value == 3)
 
     # Test insert
     ll.insert(e4, 3)
@@ -87,6 +98,14 @@ if __name__ == "__main__":
     # Test delete
     ll.delete(1)
 
-    assert(ll.get_position(1).value == 2)
-    assert(ll.get_position(2).value == 4)
-    assert(ll.get_position(3).value == 3)
+    assert (ll.get_position(1).value == 2)
+    assert (ll.get_position(2).value == 4)
+    assert (ll.get_position(3).value == 3)
+
+    # Test insert_first
+    ll.insert_first(e1)
+    assert (ll.get_position(1).value == 1)
+
+    # Test delete_first
+    assert(ll.delete_first().value == 1)
+    assert (ll.get_position(1).value == 2)
