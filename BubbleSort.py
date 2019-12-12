@@ -9,20 +9,19 @@ def bubble_sort(array):
     # Traverse through all array elements
     for i in range(n):
 
-        # Allows us to exit early when no swap has occurred
         swapped = False
 
         # Last i elements are already in place
         for j in range(0, n - i - 1):
 
-            # traverse the array from 0 to n-i-1
+            # Traverse the array from 0 to n-i-1
             # Swap if the element is greater than the next one
             if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
                 swapped = True
 
+        # Exit early when no swap has occurred
         if not swapped:
-            print(i, "Exit early")
             return
 
 
@@ -37,13 +36,13 @@ if __name__ == "__main__":
 
     assert (is_sorted(array))
 
-    sorted = [1, 3, 4, 6, 9, 14, 20, 21, 21, 25]
+    array = [1, 3, 4, 6, 9, 14, 20, 21, 21, 25]
 
-    assert (is_sorted(sorted))
+    assert (is_sorted(array))
 
-    bubble_sort(sorted)
+    bubble_sort(array)
 
-    assert (is_sorted(sorted))
+    assert (is_sorted(array))
 
     almost_sorted = [1, 3, 4, 14, 9, 6, 20, 21, 21, 25]
 
