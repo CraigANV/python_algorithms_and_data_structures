@@ -74,6 +74,8 @@ class LinkedList(object):
 
 
 if __name__ == "__main__":
+    print("Running {} tests".format(__file__))
+
     # Test cases
     # Set up some Elements
     e1 = Element(1)
@@ -107,5 +109,5 @@ if __name__ == "__main__":
     assert (ll.get_position(1).value == 1)
 
     # Test delete_first
-    assert(ll.delete_first().value == 1)
+    assert (ll.delete_first().value == 1)
     assert (ll.get_position(1).value == 2)

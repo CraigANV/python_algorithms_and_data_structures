@@ -15,6 +15,8 @@ class Stack(object):
 
 
 if __name__ == "__main__":
+    print("Running {} tests".format(__file__))
+
     # Test cases
     # Set up some Elements
     e1 = Element(1)
@@ -28,9 +30,9 @@ if __name__ == "__main__":
     # Test stack functionality
     stack.push(e2)
     stack.push(e3)
-    assert(stack.pop().value == 3)
-    assert(stack.pop().value == 2)
-    assert(stack.pop().value == 1)
-    assert(stack.pop() is None)
+    assert (stack.pop().value == 3)
+    assert (stack.pop().value == 2)
+    assert (stack.pop().value == 1)
+    assert (stack.pop() is None)
     stack.push(e4)
-    assert(stack.pop().value == 4)
+    assert (stack.pop().value == 4)
