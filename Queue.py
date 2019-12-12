@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Queue:
     def __init__(self, head=None):
         self.storage = [head]
